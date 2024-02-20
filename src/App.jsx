@@ -1,6 +1,7 @@
 import './App.css';
 import Title from './components/Title';
 import Button from './components/Button';
+import {BsFillFileEarmarkPostFill} from 'react-icons/bs';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Button 
           text={"Button A"} 
           btnClass="btn-primary"
+          icon={<BsFillFileEarmarkPostFill />}
         />
       </div>
     </div>
