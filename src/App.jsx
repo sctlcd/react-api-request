@@ -1,7 +1,7 @@
 import './App.css';
 import Title from './components/Title';
 import Button from './components/Button';
-import {BsFillFileEarmarkPostFill} from 'react-icons/bs';
+import {BsFileEarmarkPost} from 'react-icons/bs';
 
 function App() {
   return (
@@ -9,9 +9,9 @@ function App() {
       <div className='container m-auto'>
         <Title text={"React Api Requests"} />
         <Button 
-          text={"Button A"} 
+          // text={"Button A"}
           btnClass="btn-primary"
-          icon={<BsFillFileEarmarkPostFill />}
+          icon={<BsFileEarmarkPost />}
         />
       </div>
     </div>
