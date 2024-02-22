@@ -4,6 +4,9 @@ import Button from './components/Button';
 import {BsFileEarmarkPost} from 'react-icons/bs';
 
 const buttonAText = "Button A";
+function handleClick() {
+  alert('Btn A clicked');
+};
 
 function App() {
   return (
@@ -14,6 +17,7 @@ function App() {
           text={buttonAText}
           btnClass="btn-primary"
           icon={<BsFileEarmarkPost />}
+          onClick={handleClick}
         />
       </div>
     </div>
