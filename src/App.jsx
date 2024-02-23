@@ -1,14 +1,26 @@
+import React, {useState, useEffect} from "react"; 
 import './App.css';
 import Title from './components/Title';
 import Button from './components/Button';
 import {BsFileEarmarkPost} from 'react-icons/bs';
 
-const buttonAText = "Button A";
+const buttonAText = "Button A"; 
+
 function handleClick() {
-  alert('Btn A clicked');
+  // alert('Btn A clicked');
+  console.log('Btn A clicked');
 };
 
 function App() {
+  const [users, setusers] = useState();
+  const [items, setItems] = useState();
+
+  useEffect(() => {
+    fetch(`https://jsonplaceholder.typicode.com/users`)
+      .then((response) => response.json())
+      .then((json => setItems(json)));
+  }, [users]);
+
   return (
     <div className="App">
       <div className='container m-auto'>
@@ -19,6 +31,18 @@ function App() {
           icon={<BsFileEarmarkPost />}
           onClick={handleClick}
         />
+        <Title text={ users ? users : "select users" } />
+        {/* {items
+          ? items.map((item) => {
+            return <div className="">item</div>;
+          })
+          : null
+            } */}
+        {!items
+          ? null
+          : items.map((item) => {
+            return <div className="">item</div>;})
+            }
       </div>
     </div>
   );
