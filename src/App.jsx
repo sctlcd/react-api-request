@@ -32,16 +32,11 @@ function App() {
           onClick={handleClick}
         />
         <Title text={ users ? users : "select users" } />
-        {/* {items
+        {items
           ? items.map((item) => {
-            return <div className="">item</div>;
+            return <div className="">{item.name}</div>;
           })
           : null
-            } */}
-        {!items
-          ? null
-          : items.map((item) => {
-            return <div className="">item</div>;})
             }
       </div>
     </div>
