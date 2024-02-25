@@ -4,7 +4,7 @@ import Title from './components/Title';
 import Button from './components/Button';
 import {BsFileEarmarkPost} from 'react-icons/bs';
 
-const buttonAText = "Button A"; 
+const buttonAText = "Users"; 
 
 function handleClick() {
   // alert('Btn A clicked');
@@ -12,7 +12,7 @@ function handleClick() {
 };
 
 function App() {
-  const [users, setusers] = useState();
+  const [users, setusers] = useState("");
   const [items, setItems] = useState();
 
   useEffect(() => {
@@ -31,10 +31,10 @@ function App() {
           icon={<BsFileEarmarkPost />}
           onClick={handleClick}
         />
-        <Title text={ users ? users : "select users" } />
+        <Title className="h1" text={ users ? users : "Click on your choice above" } />
         {items
           ? items.map((item) => {
-            return <div className="">{item.name}</div>;
+            return <div className="" key={item.id}>{item.name && <h3>{item.name}</h3>}</div>;
           })
           : null
             }
