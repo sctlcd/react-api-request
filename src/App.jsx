@@ -2,40 +2,50 @@ import React, {useState, useEffect} from "react";
 import './App.css';
 import Title from './components/Title';
 import Button from './components/Button';
-import {BsFileEarmarkPost} from 'react-icons/bs';
+import { FaRegUser } from "react-icons/fa";
+import { GoCommentDiscussion } from "react-icons/go";
 
 const buttonAText = "Users"; 
-
-function handleClick() {
-  // alert('Btn A clicked');
-  console.log('Btn A clicked');
-};
+const buttonBText = "Comments"; 
 
 function App() {
-  const [users, setusers] = useState("");
+  const [apis, setApis] = useState("");
   const [items, setItems] = useState();
 
   useEffect(() => {
-    fetch(`https://jsonplaceholder.typicode.com/users`)
+    fetch(`https://jsonplaceholder.typicode.com/${apis}?_start=0&_limit=5`)
       .then((response) => response.json())
-      .then((json => setItems(json)));
-  }, [users]);
+      .then((json => setItems(json)), [apis]);
+  }, [apis]);
 
   return (
     <div className="App">
       <div className='container m-auto'>
         <Title text={"React Api Requests"} />
+        <Title  text={ apis ? apis : "What do you want to see?" } />
         <Button 
           text={buttonAText}
           btnClass="btn-primary"
-          icon={<BsFileEarmarkPost />}
-          onClick={handleClick}
+          icon={<FaRegUser />}
+          onClick={() => setApis("Users")}
         />
-        <Title className="h1" text={ users ? users : "Click on your choice above" } />
+        <Button 
+          text={buttonBText}
+          btnClass="btn-primary"
+          icon={<GoCommentDiscussion />}
+          onClick={() => setApis("Comments")}
+        />
         {items
           ? items.map((item) => {
-            return <div className="" key={item.id}>{item.name && <h3>{item.name}</h3>}</div>;
-          })
+            return (
+              <div className="" key={item.id}>
+                {item.name && <h3>{item.name}</h3>}
+                <div>
+                  <h4>{item.email}</h4>
+                  <p>{item.body}</p>
+                </div>
+              </div>
+          )})
           : null
             }
       </div>
