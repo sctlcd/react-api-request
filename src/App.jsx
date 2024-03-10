@@ -7,6 +7,7 @@ import { GoCommentDiscussion } from "react-icons/go";
 
 const buttonAText = "Users"; 
 const buttonBText = "Comments"; 
+const buttonCText = "Photos"; 
 
 function App() {
   const [apis, setApis] = useState("");
@@ -35,14 +36,24 @@ function App() {
           icon={<GoCommentDiscussion />}
           onClick={() => setApis("Comments")}
         />
+        <Button 
+          text={buttonCText}
+          btnClass="btn-primary"
+          icon={<GoCommentDiscussion />}
+          onClick={() => setApis("Photos")}
+        />
         {items
           ? items.map((item) => {
             return (
               <div className="" key={item.id}>
                 {item.name && <h3>{item.name}</h3>}
                 <div>
-                  <h4>{item.email}</h4>
-                  <p>{item.body}</p>
+                  {item.email && <h4>{item.email}</h4>}
+                  {item.body && <p>{item.body}</p>}
+                </div>
+                <div>
+                  {item.title && <h3>{item.title}</h3>}
+                  {item.thumbnailUrl && <img src={item.thumbnailUrl} alt={item.id} />}
                 </div>
               </div>
           )})
