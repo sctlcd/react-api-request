@@ -1,0 +1,13 @@
+@import "./assets/scss/color.scss";
+
+html {
+  background-color: $grey-100;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
+  /* remove any type of scrolling even on touch screens */
+}

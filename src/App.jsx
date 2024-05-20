@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react"; 
-import './App.css';
+import './App.scss';
 import Title from './components/Title';
 import Button from './components/Button';
 import { FaRegUser } from "react-icons/fa";

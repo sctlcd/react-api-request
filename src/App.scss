@@ -1,6 +1,8 @@
+@import "./assets/scss/color.scss";
+
 .App {
-  background-color: #d8d8d8;
-  color: #1e1e1e;
+  background-color: $grey-100;
+  color: $grey-900;
   height: 100%;
   margin: 4rem 0 7rem 0;
   padding: 0;
@@ -94,26 +96,27 @@
   font-family: inherit;
   font-size: 1rem;
   border-radius: 0.3rem;
-  color: #232323;
-  background-color: #cccccc;
+  color: $grey-800;
+  background-color: $grey-200;
   border: none;
-  box-shadow: 0 2px 6px rgba(66, 70, 94, 0.9);
+  box-shadow: 0 2px 6px $grey-500;
 }
 
 .btn:hover {
   cursor: pointer;
   box-shadow: none;
   transition: 0.3s ease;
-  background: #fafafa;
-  color: #232323;
+  background: $grey-500;
+  color: $grey-800;
+  box-shadow: 0 2px 6px rgba(17, 17, 17);
 }
 
 .btn-primary {
-  color: #cccccc;
+  color: $grey-200;
 }
 
 .btn-primary:hover {
-  color: #cccccc;
+  color: $grey-200;
 }
 
 /* uppercase */
@@ -123,7 +126,8 @@
 
 /* font weight */
 .bold {
-  font-weight: bold;;
+  font-weight: bold;
+  ;
 }
 
 /* font size */
@@ -152,11 +156,15 @@
 .card {
   width: 20rem;
   margin: 1.5rem;
-  color: #232323;
+  color: $grey-800;
   border-radius: 0.5rem;
   overflow: hidden;
-  box-shadow: 0 1px 6px rgba(66, 70, 94, 0.9);
+  box-shadow: 0 1px 6px $grey-500;
   border: none;
+}
+
+.card:hover {
+  box-shadow: 0 2px 6px rgba(17, 17, 17);
 }
 
 .card-content {
@@ -164,7 +172,7 @@
 }
 
 .card-header {
-  color: #cccccc;
+  color: $grey-200;
 
   h3 {
     margin: 0;
@@ -173,81 +181,81 @@
 }
 
 .card-footer {
-  color: #cccccc;
-  
+  color: $grey-200;
+
   h5 {
     margin: 0;
     padding: 0.4rem;
   }
 }
 
-#container-users{
+#container-users {
   .card-header {
-    background: darkred;
+    background: $darkred;
   }
 
   .card-footer {
-    background: darkred;
+    background: $darkred;
   }
 }
 
-#container-comments{
+#container-comments {
   .card-header {
-    background: darkgreen;
+    background: $darkgreen;
   }
 
   .card-footer {
-    background: darkgreen;
+    background: $darkgreen;
   }
 }
 
-#container-photos{
+#container-photos {
   .card-header {
-    background: darkblue;
+    background: $darkblue;
   }
 
   .card-footer {
-    background: darkblue;
+    background: $darkblue;
   }
 }
 
 .card-body {
   padding: 3rem 0;
-  background-color: rgb(235, 234, 234);
+  background-color: $grey-400;
 }
 
 #btn-users {
-  background: darkred;
+  background: $darkred;
 }
 
 #btn-comments {
-  background: darkgreen;
+  background: $darkgreen;
 }
 
 #btn-photos {
-  background: darkblue;
+  background: $darkblue;
 }
 
 #btn-users:hover {
-  background: red;
+  background: $red;
 }
 
 #btn-comments:hover {
-  background: green;
+  background: $green;
 }
 
 #btn-photos:hover {
-  background: blue;
+  background: $blue;
 }
 
 .list-users {
-  color: darkred;
+  color: $darkred;
 }
 
 .list-comments {
-  color: darkgreen;
+  color: $darkgreen;
 }
 
 .list-photos {
-  color: darkblue;
+  color: $darkblue;
 }
