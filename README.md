@@ -1,10 +1,8 @@
-# [react-api-requests](https://react-api-requests.web.app/)
+# [react-api-requests](https://react-api-requests-ldxp3c4yq-sctlcds-projects.vercel.app/)
 
 <br />
 <img src="https://github.com/sctlcd/react-api-requests/blob/main/design/react-api-requests-preview.png" alt="react-api-requests-preview" width="800">
 <br />
-<!-- <img src="https://github.com/sctlcd/react-api-requests/blob/main/design/react-api-requests-zoom.png" alt="react-api-requests-zoom" width="800">
-<br /> -->
 
 ---
 
@@ -29,7 +27,7 @@
 
 ## Introduction <a name="introduction"></a>
 
-Creating an api requests app  using [React](https://reactjs.org/).
+Creating an api requests app using [React](https://reactjs.org/) and [{JSON} Placeholder](https://jsonplaceholder.typicode.com/).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -211,6 +209,32 @@ Back to [top](#tableOfContents)
     ```
 
 6. Follow the instructions
+    ```
+    $ npm run deploy
+
+    > react-api-requests@0.1.0 deploy
+    > vercel --prod
+
+    Vercel CLI 34.2.0
+    ? Set up and deploy “D:\github\react\react-api-requests”? yes
+    ? Which scope do you want to deploy to? sctlcd's projects
+    ? Link to existing project? no
+    ? What’s your project’s name? react-api-requests
+    ? In which directory is your code located? ./
+    Local settings detected in vercel.json:
+    Auto-detected Project Settings (Create React App):
+    - Build Command: react-scripts build
+    - Development Command: react-scripts start
+    - Install Command: `yarn install`, `pnpm install`, `npm install`, or `bun install`
+    - Output Directory: build
+    ? Want to modify these settings? yes
+    ? Which settings would you like to overwrite (select multiple)?
+    🔗  Linked to sctlcds-projects/react-api-requests (created .vercel and added it to .gitignore)
+    🔍  Inspect: https://vercel.com/sctlcds-projects/react-api-requests/5ftNRUrzpM6NqrxTt1snhqnGLSFo
+    ✅  Production: https://react-api-requests-ldxp3c4yq-sctlcds-projects.vercel.app
+    ```
+
+    => live link: https://react-api-requests-ldxp3c4yq-sctlcds-projects.vercel.app
 
 Back to [top](#tableOfContents)
 
