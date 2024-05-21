@@ -1,4 +1,4 @@
-# [react-api-requests](https://react-api-requests-ldxp3c4yq-sctlcds-projects.vercel.app/)
+# [react-api-requests](https://react-api-requests.vercel.app/)
 
 <br />
 <img src="https://github.com/sctlcd/react-api-requests/blob/main/design/react-api-requests-preview.png" alt="react-api-requests-preview" width="800">
@@ -234,7 +234,7 @@ Back to [top](#tableOfContents)
     ✅  Production: https://react-api-requests-ldxp3c4yq-sctlcds-projects.vercel.app
     ```
 
-    => live link: https://react-api-requests-ldxp3c4yq-sctlcds-projects.vercel.app
+    => live link: https://react-api-requests.vercel.app/
 
 Back to [top](#tableOfContents)
 
@@ -245,7 +245,6 @@ Back to [top](#tableOfContents)
 ### Media <a name="media"></a>
 
 - [favicon.ico](https://www.flaticon.com/free-icon/api_4180439?term=api&page=1&position=4&origin=search&related_id=4180439) - [Flaticon](https://www.flaticon.com/) | copyright [Freepik](https://www.freepik.com)
-- []() - []() | copyright []()
 
 Back to [top](#tableOfContents)
 
