@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function Button ({ text="click", btnClass, icon, onClick }) {
+export default function Button ({ text="click", btnClass, icon, onClick, id }) {
   return (
-    <button className={`btn ${btnClass}`} onClick={onClick} >
+    <button id={`btn-${id}`} className={`btn ${btnClass}`} onClick={onClick} >
       <span className="mr-05">{icon}</span>
-      {text}
+      {text.charAt(0).toUpperCase() + text.slice(1)}
     </button>
   );
 };
