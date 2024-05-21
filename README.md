@@ -84,6 +84,10 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+#### `npm run deploy`
+
+Deploying to Vercel to create a Production Deployment. Go to [Vercel deployment](#vercel)
+
 Back to [top](#tableOfContents)
 
 ---
@@ -129,6 +133,8 @@ Back to [top](#tableOfContents)
 
 ### Deployment - Live Website <a name="#deploymentLiveWebsite"></a>
 
+#### Firebase
+
 [react-api-requests](https://github.com/sctlcd/react-api-requests) live website is currently deployed on [Firebase](https://firebase.google.com/) using the `main` branch on GitHub. Once you have the project setup locally, you can proceed to deploy it remotely.
 
 1. Install Firebase CLI Tools, [firebase-tools](https://www.npmjs.com/package/firebase-tools)
@@ -168,7 +174,43 @@ Back to [top](#tableOfContents)
 
 3. After running `npm run build`, deploy using the command `firebase deploy`.
 
-=> live link: https://react-api-requests.web.app/
+=> live link: https://react-api-requests.web.app/ (example link - not in use)
+
+Back to [top](#tableOfContents)
+
+
+#### Vercel <a name="#vercel"></a>
+
+[react-api-requests](https://github.com/sctlcd/react-api-requests) live website is currently deployed on [Vercel](https://vercel.com/) using the `main` branch on GitHub. Once you have the project setup locally, you can proceed to deploy it remotely.
+
+1. Create a [Vercel](https://vercel.com/) account and/or log in to your [Vercel](https://vercel.com/) account
+
+2. Install Vercel package in the project:
+    ```
+    npm i vercel
+    ```
+
+3. Add a deploy script in the package.json file
+    ```
+    {
+      "scripts": {
+        // ...
+        "deploy": "vercel --prod"
+      },
+    }
+    ```
+
+4. To login run:
+    ```
+    npx vercel login
+    ```
+
+5. In the terminal run:
+    ```
+    npm run deploy
+    ```
+
+6. Follow the instructions
 
 Back to [top](#tableOfContents)
 
